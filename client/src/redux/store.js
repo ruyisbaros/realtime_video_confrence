@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import currentUserSlice from "./currentUserSlice";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    currentUser: currentUserSlice,
+  },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: false,
